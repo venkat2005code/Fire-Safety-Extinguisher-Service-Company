@@ -187,3 +187,224 @@
 @media(max-width:768px){
     .offset-box { margin: 0 auto; width: 90%; padding: 3rem 2rem; }
 }
+
+/* === 1024px Fixes: services.css === */
+@media (max-width: 1024px) {
+
+    /* Layout 7: Split hero */
+    .split-left-dark {
+        padding: 5rem 2.5rem;
+    }
+    .split-left-dark h1 {
+        font-size: 2.8rem;
+    }
+    .split-left-dark p {
+        font-size: 1.15rem;
+    }
+
+    /* Layout 8: Zigzag rows */
+    .zigzag-row {
+        gap: 3rem;
+        margin-bottom: 5rem;
+    }
+    .zz-text h2 {
+        font-size: 2.1rem;
+    }
+    .zz-text p {
+        font-size: 1.05rem;
+    }
+
+    /* Layout 9: Neon grid - 2 col */
+    .neon-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .neon-card {
+        padding: 3rem 1.5rem;
+    }
+
+    /* Layout 10: Masonry gallery */
+    .masonry-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 230px;
+    }
+
+    /* Layout 12: Offset glass box */
+    .offset-box {
+        max-width: 420px;
+        margin-left: 5%;
+        padding: 3rem 2.5rem;
+    }
+    .offset-box h2 {
+        font-size: 2.1rem;
+    }
+
+    /* ── Orphan last item: center when alone on a row ── */
+    .neon-grid > *:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: calc(50% - 1.5rem);
+    }
+}
+
+/* === 768px Fixes: services.css === */
+@media (max-width: 768px) {
+
+    /* Layout 7: Split hero */
+    .layout-7 {
+        min-height: auto;
+    }
+    .hero-split {
+        flex-direction: column;
+    }
+    .split-left-dark {
+        padding: 4rem 1.5rem;
+    }
+    .split-left-dark h1 {
+        font-size: 2.2rem;
+    }
+    .split-left-dark p {
+        font-size: 1.1rem;
+    }
+    .split-right-img {
+        min-height: 300px;
+    }
+
+    /* Layout 8: Zigzag */
+    .zigzag-row,
+    .reverse-row {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+    .zz-img::after {
+        display: none;
+    }
+    .zz-text h2 {
+        font-size: 1.9rem;
+    }
+
+    /* Layout 9: Neon grid */
+    .neon-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .neon-card {
+        padding: 3rem 1.5rem;
+    }
+
+    /* Layout 10: Masonry gallery */
+    .masonry-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 220px;
+    }
+    .masonry-item.wide {
+        grid-column: span 1;
+    }
+
+    /* Layout 11: Vertical timeline — already handled at 768px */
+
+    /* Layout 12: Offset glass box */
+    .banner-with-offset-box {
+        padding: 7rem 0;
+        background-attachment: scroll;
+    }
+    .offset-box {
+        margin: 0 auto;
+        width: 88%;
+        padding: 2.5rem 2rem;
+    }
+    .offset-box h2 {
+        font-size: 1.9rem;
+    }
+}
+
+/* === 360px Fixes: services.css === */
+@media (max-width: 400px) {
+
+    /* Layout 7: Split Hero */
+    .split-left-dark {
+        padding: 3rem 1rem;
+    }
+    .split-left-dark h1 {
+        font-size: 2rem;
+    }
+    .split-left-dark p {
+        font-size: 1rem;
+    }
+    .split-right-img {
+        min-height: 220px;
+    }
+
+    /* Layout 8: Zigzag rows */
+    .zigzag-row,
+    .reverse-row {
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    .zz-text h2 {
+        font-size: 1.6rem;
+    }
+    .zz-text p {
+        font-size: 0.95rem;
+    }
+
+    /* Layout 9: Neon grid */
+    .neon-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .neon-card {
+        padding: 2.5rem 1.2rem;
+    }
+    .neon-card h4 {
+        font-size: 1.2rem;
+    }
+    .card-icon {
+        font-size: 2.5rem;
+    }
+
+    /* Layout 10: Masonry gallery */
+    .masonry-gallery {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 200px;
+    }
+    .masonry-item.tall,
+    .masonry-item.wide {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+
+    /* Layout 11: Vertical timeline */
+    .vertical-timeline::after {
+        left: 18px;
+    }
+    .v-step {
+        padding-left: 52px;
+    }
+    .left-step .v-dot,
+    .right-step .v-dot {
+        left: 6px;
+        right: auto;
+    }
+    .v-step h4 {
+        font-size: 1.2rem;
+    }
+
+    /* Layout 12: Offset glass box */
+    .banner-with-offset-box {
+        padding: 5rem 0;
+        background-attachment: scroll;
+    }
+    .offset-box {
+        margin: 0 auto;
+        width: 94%;
+        padding: 2rem 1.2rem;
+    }
+    .offset-box h2 {
+        font-size: 1.6rem;
+    }
+    .offset-box p {
+        font-size: 0.95rem;
+    }
+}

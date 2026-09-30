@@ -271,3 +271,258 @@
         padding: 4rem 2rem;
     }
 }
+
+/* === 1024px Fixes: compliance.css === */
+@media (max-width: 1024px) {
+
+    /* Layout 13: Tall hero */
+    .tall-hero-bottom-left {
+        padding: 5rem 3rem;
+    }
+    .tall-hero-bottom-left h1 {
+        font-size: 3rem;
+    }
+    .tall-hero-bottom-left p {
+        font-size: 1.15rem;
+    }
+
+    /* Layout 14: Comparison board — keep 2-col, tighten padding */
+    .comp-col {
+        padding: 3rem 2rem;
+    }
+    .good-col h3,
+    .bad-col h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Layout 15: Donut grid */
+    .donut-grid {
+        gap: 4rem;
+    }
+
+    /* Layout 16: Hazard cards — 2-col */
+    .hazard-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .hazard-card h4 {
+        font-size: 1.4rem;
+    }
+
+    /* Layout 17: Shape wrap */
+    .center-circle-img {
+        width: 320px;
+        height: 320px;
+        margin: 0 2rem 2rem 0;
+    }
+    .shape-wrap-container h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Layout 18: Newsletter bar */
+    .minimal-signup-bar {
+        padding: 2.5rem 2rem;
+    }
+    .signup-flex h3 {
+        font-size: 1.8rem;
+    }
+
+    /* CTA split comp */
+    .cta-split-comp {
+        flex-direction: column-reverse;
+    }
+    .cta-split-comp-img {
+        min-height: 320px;
+    }
+    .cta-split-comp-content {
+        padding: 4rem 2.5rem;
+    }
+    .cta-split-comp-content h2 {
+        font-size: 2rem;
+    }
+
+    /* ── Orphan last item: center when alone on a row ── */
+    .hazard-cards-grid > *:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: calc(50% - 1.25rem);
+    }
+}
+
+/* === 768px Fixes: compliance.css === */
+@media (max-width: 768px) {
+
+    /* Layout 13: Tall hero — already handled at 768px */
+
+    /* Layout 14: Comparison board */
+    .comparison-board {
+        grid-template-columns: 1fr;
+        border-radius: 16px;
+    }
+    .comp-col {
+        padding: 2.5rem 1.5rem;
+    }
+    .good-col h3,
+    .bad-col h3 {
+        font-size: 1.7rem;
+    }
+
+    /* Layout 15: Donut grid */
+    .donut-grid {
+        gap: 3rem;
+    }
+    .donut {
+        width: 125px;
+        height: 125px;
+        font-size: 2.2rem;
+    }
+
+    /* Layout 16: Hazard cards */
+    .hazard-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .hazard-content {
+        padding: 1.5rem;
+    }
+    .hazard-card h4 {
+        font-size: 1.3rem;
+    }
+
+    /* Layout 17: Shape wrap */
+    .center-circle-img {
+        float: none;
+        display: block;
+        margin: 0 auto 3rem;
+        width: 260px;
+        height: 260px;
+        shape-outside: none;
+    }
+    .shape-wrap-container h2 {
+        padding-top: 0;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .shape-wrap-container p {
+        text-align: center;
+    }
+
+    /* Layout 18: Newsletter signup */
+    .signup-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .inline-signup {
+        width: 100%;
+        flex-direction: column;
+    }
+    .signup-flex h3 {
+        font-size: 1.7rem;
+    }
+
+    /* CTA split comp */
+    .cta-split-comp {
+        flex-direction: column-reverse;
+    }
+    .cta-split-comp-img {
+        min-height: 240px;
+    }
+    .cta-split-comp-content {
+        padding: 3rem 1.5rem;
+    }
+    .cta-split-comp-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* === 360px Fixes: compliance.css === */
+@media (max-width: 400px) {
+
+    /* Layout 13: Tall hero */
+    .tall-hero-bottom-left {
+        padding: 3rem 1rem;
+        background-attachment: scroll;
+    }
+    .tall-hero-bottom-left h1 {
+        font-size: 2rem;
+    }
+    .tall-hero-bottom-left p {
+        font-size: 1rem;
+    }
+
+    /* Layout 14: Comparison board */
+    .comparison-board {
+        grid-template-columns: 1fr;
+        border-radius: 16px;
+    }
+    .comp-col {
+        padding: 1.5rem 1rem;
+    }
+    .good-col h3,
+    .bad-col h3 {
+        font-size: 1.5rem;
+    }
+    .good-col li,
+    .bad-col li {
+        font-size: 0.95rem;
+    }
+    .comp-img {
+        height: 180px;
+    }
+
+    /* Layout 15: Donut grid */
+    .donut-grid {
+        gap: 2.5rem;
+    }
+    .donut {
+        width: 110px;
+        height: 110px;
+        font-size: 2rem;
+    }
+
+    /* Layout 16: Hazard cards */
+    .hazard-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .hazard-content {
+        padding: 1.2rem;
+    }
+    .hazard-card h4 {
+        font-size: 1.2rem;
+    }
+
+    /* Layout 17: Shape wrap */
+    .center-circle-img {
+        width: 220px;
+        height: 220px;
+    }
+    .shape-wrap-container h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Layout 18: Newsletter bar */
+    .minimal-signup-bar {
+        padding: 2rem 1rem;
+    }
+    .signup-flex h3 {
+        font-size: 1.4rem;
+    }
+    .inline-signup input {
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
+    .inline-signup button {
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    /* CTA split comp */
+    .cta-split-comp-content {
+        padding: 2.5rem 1rem;
+    }
+    .cta-split-comp-content h2 {
+        font-size: 1.6rem;
+    }
+    .cta-split-comp-img {
+        min-height: 180px;
+    }
+}

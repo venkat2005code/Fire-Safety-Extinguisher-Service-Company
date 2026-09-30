@@ -422,3 +422,325 @@
         padding: 3rem 2rem;
     }
 }
+
+/* === 1024px Fixes: pricing.css === */
+@media (max-width: 1024px) {
+
+    /* Layout 19: Pricing hero */
+    .white-minimal-header {
+        padding: 8rem 0 5rem;
+    }
+    .white-minimal-header h1 {
+        font-size: 3rem;
+    }
+    .white-minimal-header p {
+        font-size: 1.15rem;
+    }
+
+    /* Layout 20: Horizontal pricing banner */
+    .horizontal-pricing-banner {
+        padding: 2.5rem 2.5rem;
+        gap: 1.5rem;
+    }
+    .hpb-left h3 {
+        font-size: 1.7rem;
+    }
+    .hpb-center ul {
+        gap: 1.2rem;
+    }
+    .hpb-center ul li {
+        font-size: 1rem;
+    }
+    .hpb-right .price {
+        font-size: 2.5rem;
+    }
+
+    /* Layout 21: Service menu grid — 2-col */
+    .service-menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Residential package card */
+    .residential-package-card {
+        padding: 3rem 2.5rem;
+    }
+    .res-card-content {
+        padding-right: 2.5rem;
+    }
+    .res-card-content h3 {
+        font-size: 2.2rem;
+    }
+    .res-card-price .price {
+        font-size: 3.5rem;
+    }
+
+    /* Layout 22: VIP dark card */
+    .vip-dark-card {
+        padding: 3.5rem 2.5rem;
+    }
+    .vip-header-text h3 {
+        font-size: 2.5rem;
+    }
+    .vip-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .vip-grid div {
+        font-size: 1.1rem;
+    }
+
+    /* Layout 23: Diagonal split */
+    .split-txt h2 {
+        font-size: 2.8rem;
+    }
+    .split-stat h1 {
+        font-size: 7rem;
+    }
+    .split-stat p {
+        font-size: 1.3rem;
+    }
+
+    /* Layout 24: Glass CTA card */
+    .glass-cta-card {
+        padding: 5rem 3rem;
+    }
+
+    /* Dark overlay box */
+    .dark-overlay-box {
+        padding: 4rem 3rem;
+    }
+
+    /* ── Orphan last item: center when alone on a row ── */
+    .service-menu-grid > *:last-child:nth-child(odd),
+    .vip-grid          > *:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: calc(50% - 1rem);
+    }
+}
+
+/* === 768px Fixes: pricing.css === */
+@media (max-width: 768px) {
+
+    /* Layout 19: Pricing hero header */
+    .white-minimal-header {
+        padding: 7rem 0 4rem;
+    }
+    .white-minimal-header h1 {
+        font-size: 2.4rem;
+        line-height: 1.15;
+    }
+    .white-minimal-header p {
+        font-size: 1.1rem;
+    }
+
+    /* Layout 20: Horizontal pricing banner */
+    .horizontal-pricing-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+    }
+    .hpb-left h3 {
+        font-size: 1.6rem;
+    }
+    .hpb-center ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+    }
+    .hpb-right {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .hpb-right .price {
+        font-size: 2.5rem;
+    }
+
+    /* Layout 21: Service menu grid */
+    .service-menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Residential package card */
+    .residential-package-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+    }
+    .res-card-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    .res-card-content h3 {
+        font-size: 2rem;
+    }
+    .res-card-price {
+        padding: 2rem;
+        width: 100%;
+    }
+    .res-card-price .price {
+        font-size: 3.2rem;
+    }
+
+    /* Layout 22: VIP dark card */
+    .vip-dark-card {
+        padding: 2.5rem 1.5rem;
+    }
+    .vip-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    .vip-header-text h3 {
+        font-size: 2.2rem;
+    }
+    .vip-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Layout 23: Diagonal split */
+    .d-flex-split {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+    .split-txt,
+    .split-stat {
+        width: 100%;
+        padding: 0;
+    }
+    .split-txt h2 {
+        font-size: 2.4rem;
+    }
+    .split-stat h1 {
+        font-size: 6rem;
+    }
+    .diagonal-split-5050 {
+        background: var(--bg-alt);
+        padding: 5rem 0;
+    }
+
+    /* Layout 24: Glass CTA — already handled at 768px */
+
+    /* Dark overlay box — already handled at 768px */
+}
+
+/* === 360px Fixes: pricing.css === */
+@media (max-width: 400px) {
+
+    /* Layout 19: White minimal header */
+    .white-minimal-header {
+        padding: 6rem 0 3rem;
+    }
+    .white-minimal-header h1 {
+        font-size: 2rem;
+        line-height: 1.15;
+    }
+    .white-minimal-header p {
+        font-size: 1rem;
+    }
+
+    /* Layout 20: Horizontal pricing banner */
+    .horizontal-pricing-banner {
+        padding: 2rem 1rem;
+        border-radius: 12px;
+    }
+    .hpb-left h3 {
+        font-size: 1.4rem;
+    }
+    .hpb-center ul {
+        gap: 0.6rem;
+    }
+    .hpb-center ul li {
+        font-size: 0.9rem;
+    }
+    .hpb-right .price {
+        font-size: 2.2rem;
+    }
+    .hpb-right .btn-outline {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* Layout 21: Service menu grid */
+    .service-menu-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-content-wrapper {
+        padding: 1.2rem;
+    }
+    .service-info h4 {
+        font-size: 1.1rem;
+    }
+    .service-price {
+        font-size: 1.6rem;
+    }
+
+    /* Residential package card */
+    .residential-package-card {
+        padding: 2rem 1rem;
+        border-radius: 16px;
+    }
+    .res-card-content h3 {
+        font-size: 1.8rem;
+    }
+    .res-card-price {
+        padding: 1.5rem;
+    }
+    .res-card-price .price {
+        font-size: 2.8rem;
+    }
+
+    /* Layout 22: VIP dark card */
+    .vip-dark-card {
+        padding: 2rem 1.2rem;
+        border-radius: 16px;
+    }
+    .vip-header-text h3 {
+        font-size: 2rem;
+    }
+    .vip-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .vip-grid div {
+        font-size: 1rem;
+    }
+
+    /* Layout 23: Diagonal split */
+    .split-txt h2 {
+        font-size: 2rem;
+    }
+    .split-stat h1 {
+        font-size: 5rem;
+    }
+    .split-stat p {
+        font-size: 1.1rem;
+    }
+
+    /* Layout 24: Glass CTA card */
+    .glass-cta-card {
+        padding: 3rem 1.2rem;
+        border-radius: 20px;
+        width: 96%;
+    }
+    .glass-cta-card h2 {
+        font-size: 1.8rem;
+    }
+    .glass-cta-card p {
+        font-size: 1rem;
+    }
+    .btn-pulse {
+        font-size: 1rem;
+        padding: 1.1rem 2rem;
+        letter-spacing: 1px;
+    }
+
+    /* Dark overlay box */
+    .dark-overlay-box {
+        padding: 2rem 1rem;
+    }
+    .dark-overlay-box h2 {
+        font-size: 1.6rem;
+    }
+}

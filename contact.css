@@ -219,3 +219,238 @@
     align-items: center; 
     gap: 10px;
 }
+
+/* === 1024px Fixes: contact.css === */
+@media (max-width: 1024px) {
+
+    /* Layout 25: Gradient hero */
+    .gradient-hero-only h1 {
+        font-size: 3rem;
+    }
+    .gradient-hero-only p {
+        font-size: 1.15rem;
+    }
+
+    /* Layout 26: Pulsing hotline */
+    .pulsing-hotline-block {
+        padding: 4.5rem 2rem;
+    }
+    .pulse-text {
+        font-size: 4rem;
+    }
+
+    /* Layout 27: Glass contact form */
+    .glass-form-container {
+        padding: 4rem 3rem;
+        max-width: 560px;
+    }
+    .glass-form-container h3 {
+        font-size: 2.2rem;
+    }
+
+    /* Layout 28: Map/info */
+    .map-side {
+        width: 52%;
+    }
+    .info-side {
+        width: 48%;
+        padding: 4rem 2.5rem;
+    }
+    .info-side h3 {
+        font-size: 2rem;
+    }
+    .info-side p {
+        font-size: 1.1rem;
+    }
+
+    /* Layout 29: Accordion */
+    .acc-item summary {
+        padding: 1.75rem;
+        font-size: 1.15rem;
+    }
+
+    /* Layout 30: Team roles — 2-col at 1024px */
+    .team-roles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .role-img {
+        height: 210px;
+    }
+
+    /* ── Orphan last item: center when alone on a row ── */
+    .team-roles-grid > *:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: calc(50% - 1.25rem);
+    }
+}
+
+/* === 768px Fixes: contact.css === */
+@media (max-width: 768px) {
+
+    /* Layout 25: Gradient hero */
+    .layout-25 {
+        min-height: 75vh;
+    }
+    .gradient-hero-only h1 {
+        font-size: 2.4rem;
+    }
+    .gradient-hero-only p {
+        font-size: 1.1rem;
+    }
+
+    /* Layout 26: Pulsing hotline */
+    .pulsing-hotline-block {
+        padding: 4rem 1.5rem;
+        border-radius: 16px;
+    }
+    .pulsing-hotline-block h2 {
+        font-size: 1.2rem;
+    }
+    .pulse-text {
+        font-size: 3rem;
+    }
+
+    /* Layout 27: Glass contact form */
+    .layout-27 {
+        background-attachment: scroll;
+        padding: 7rem 0;
+    }
+    .glass-form-container {
+        padding: 3.5rem 1.5rem;
+        width: 94%;
+        border-radius: 16px;
+    }
+    .glass-form-container h3 {
+        font-size: 2rem;
+    }
+
+    /* Layout 28: Map/info */
+    .map-placeholder-layout {
+        flex-direction: column;
+        border-radius: 16px;
+    }
+    .map-side {
+        width: 100%;
+        min-height: 280px;
+    }
+    .info-side {
+        width: 100%;
+        padding: 3rem 1.5rem;
+    }
+    .info-side h3 {
+        font-size: 1.8rem;
+    }
+    .info-side p {
+        font-size: 1.1rem;
+    }
+
+    /* Layout 29: Accordion */
+    .acc-item summary {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+    }
+    .acc-item p {
+        padding: 0 1.5rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Layout 30: Team roles */
+    .team-roles-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    .role-img {
+        height: 200px;
+    }
+    .role-content h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* === 360px Fixes: contact.css === */
+@media (max-width: 400px) {
+
+    /* Layout 25: Gradient hero */
+    .layout-25 {
+        min-height: 70vh;
+    }
+    .gradient-hero-only h1 {
+        font-size: 2rem;
+    }
+    .gradient-hero-only p {
+        font-size: 1rem;
+    }
+
+    /* Layout 26: Pulsing hotline */
+    .pulsing-hotline-block {
+        padding: 3rem 1rem;
+        border-radius: 16px;
+    }
+    .pulsing-hotline-block h2 {
+        font-size: 1.1rem;
+    }
+    .pulse-text {
+        font-size: 2.5rem;
+    }
+
+    /* Layout 27: Glass contact form */
+    .glass-form-container {
+        padding: 3rem 1.2rem;
+        border-radius: 16px;
+        width: 96%;
+    }
+    .glass-form-container h3 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    .float-input {
+        margin-bottom: 2rem;
+    }
+    .float-input input,
+    .float-input textarea {
+        font-size: 1rem;
+    }
+    .glass-form .btn-block {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    /* Layout 28: Map placeholder */
+    .map-placeholder-layout {
+        border-radius: 16px;
+    }
+    .map-side {
+        min-height: 220px;
+    }
+    .info-side {
+        padding: 2rem 1rem;
+    }
+    .info-side h3 {
+        font-size: 1.6rem;
+    }
+    .info-side p {
+        font-size: 1rem;
+    }
+
+    /* Layout 29: Accordion FAQ */
+    .acc-item summary {
+        padding: 1.2rem;
+        font-size: 1rem;
+    }
+    .acc-item p {
+        padding: 0 1.2rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    /* Layout 30: Team roles */
+    .team-roles-grid {
+        grid-template-columns: 1fr;
+    }
+    .role-img {
+        height: 180px;
+    }
+    .role-content h3 {
+        font-size: 1.2rem;
+    }
+}

@@ -1035,6 +1035,161 @@ html[dir="rtl"] .footer-links li a:hover i {
 /* ==========================================================================
    Responsive
    ========================================================================== */
+
+/* --- 1024px Global Fixes (iPad landscape / small laptop) --- */
+@media (max-width: 1024px) {
+
+    /* Container */
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    /* Header */
+    .header-container {
+        height: 72px;
+        gap: 1.5rem;
+    }
+    .logo img {
+        height: 42px;
+        width: 42px;
+    }
+    .logo-brand {
+        font-size: 1.25rem;
+    }
+    .logo-tagline {
+        font-size: 0.68rem;
+    }
+    .btn-nav-cta {
+        font-size: 0.88rem;
+        padding: 0.5rem 1.1rem;
+    }
+
+    /* Top bar */
+    .top-bar {
+        font-size: 0.82rem;
+    }
+
+    /* Nav links tighter */
+    .nav-list {
+        gap: 0.9rem;
+    }
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 6rem 0 4rem;
+    }
+    .hero-title {
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* Sections */
+    .section {
+        padding: 4rem 0;
+    }
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    /* Services grid: 2-col on 1024px */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Pricing grid: 1-col */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+    }
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    /* Contact wrapper: stack */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .contact-form-container {
+        padding: 2.5rem 2rem;
+    }
+
+    /* Footer grid: 2-col */
+    .footer-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 2rem;
+    }
+
+    /* Split layout */
+    .split-layout {
+        gap: 2.5rem;
+    }
+
+    /* CTA split */
+    .cta-split,
+    .cta-split-comp {
+        flex-direction: column;
+    }
+    .cta-split-img,
+    .cta-split-comp-img {
+        min-height: 320px;
+    }
+    .cta-split-content,
+    .cta-split-comp-content {
+        padding: 4rem 2.5rem;
+    }
+    .cta-split-content h2,
+    .cta-split-comp-content h2 {
+        font-size: 2rem;
+    }
+
+    /* Inner hero */
+    .inner-hero {
+        padding: 7rem 0 4rem;
+    }
+    .inner-hero h1 {
+        font-size: 2.8rem;
+    }
+
+    /* Process grid: 2-col */
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Certs */
+    .certs-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Warning grid: 2-col */
+    .warning-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Util buttons */
+    .util-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* ── Orphan last item: center when alone on a row (2-col grids) ── */
+    .services-grid > *:last-child:nth-child(odd),
+    .process-grid  > *:last-child:nth-child(odd),
+    .certs-container > *:last-child:nth-child(odd),
+    .warning-grid  > *:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: calc(50% - 1rem);
+    }
+}
+
 @media (max-width: 992px) {
     .contact-wrapper {
         grid-template-columns: 1fr;
@@ -1153,6 +1308,174 @@ html[dir="rtl"] .footer-links li a:hover i {
 
     .footer-legal {
         gap: 1rem;
+    }
+}
+
+/* --- 768px Global Fixes --- */
+@media (max-width: 768px) {
+
+    /* Container */
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    /* Top bar */
+    .top-bar-container {
+        flex-direction: column;
+        gap: 0.2rem;
+        text-align: center;
+    }
+    .top-bar {
+        font-size: 0.8rem;
+        padding: 0.4rem 0;
+    }
+
+    /* Header */
+    .header-container {
+        height: 70px;
+        padding: 0 1.25rem;
+    }
+    .logo img {
+        height: 40px;
+        width: 40px;
+    }
+    .logo-brand {
+        font-size: 1.2rem;
+    }
+    .logo-tagline {
+        display: none;
+    }
+
+    /* Nav menu drop position matches header height */
+    .nav-menu {
+        top: 70px;
+        padding: 1.5rem 1.25rem;
+    }
+    .btn-nav-cta {
+        font-size: 0.85rem;
+        padding: 0.45rem 1rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 5rem 0 3.5rem;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .badge {
+        font-size: 0.82rem;
+        padding: 0.4rem 1rem;
+    }
+
+    /* Sections */
+    .section {
+        padding: 3.5rem 0;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .section-desc {
+        font-size: 1rem;
+    }
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    /* Services grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Pricing grid */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    /* Contact wrapper */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .contact-form-container {
+        padding: 2rem 1.25rem;
+    }
+
+    /* Buttons */
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.25rem;
+    }
+
+    /* Inner hero */
+    .inner-hero {
+        padding: 6rem 0 3.5rem;
+    }
+    .inner-hero h1 {
+        font-size: 2.2rem;
+    }
+    .inner-hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Split layout */
+    .split-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .split-layout.reverse .split-img { order: 1; }
+    .split-layout.reverse .split-content { order: 2; }
+
+    /* CTA split */
+    .cta-split,
+    .cta-split-comp {
+        flex-direction: column;
+    }
+    .cta-split-img,
+    .cta-split-comp-img {
+        min-height: 240px;
+    }
+    .cta-split-content,
+    .cta-split-comp-content {
+        padding: 3rem 1.5rem;
+    }
+    .cta-split-content h2,
+    .cta-split-comp-content h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Process grid */
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+    .process-step {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Certs */
+    .certs-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Warning grid */
+    .warning-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1409,4 +1732,226 @@ html {
 /* Ensure layout 1 text is white */
 .layout-1 h1, .layout-1 p {
     color: white !important;
+}
+
+/* ==========================================================================
+   360px Mobile — Full Alignment Fixes
+   ========================================================================== */
+@media (max-width: 400px) {
+
+    /* --- Container --- */
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* --- Top Bar: hide left text, keep number visible --- */
+    .top-bar-container {
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
+        padding: 0.4rem 1rem;
+    }
+    .top-bar {
+        font-size: 0.78rem;
+    }
+
+    /* --- Header / Hamburger --- */
+    .header-container {
+        height: 64px;
+        gap: 0;
+        padding: 0 1rem;
+    }
+
+    /* Logo: keep icon, shrink text */
+    .logo img {
+        height: 36px;
+        width: 36px;
+    }
+    .logo-brand {
+        font-size: 1.1rem;
+    }
+    .logo-tagline {
+        font-size: 0.65rem;
+    }
+
+    /* Hamburger stays right-aligned, visible */
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        padding: 0.4rem;
+        margin-left: auto;
+    }
+
+    /* Mobile nav menu: full-width dropdown, properly spaced */
+    .nav-menu {
+        top: 64px;
+        padding: 1.2rem 1rem;
+        gap: 0.5rem;
+    }
+    .nav-list {
+        gap: 0.6rem;
+    }
+    .nav-link {
+        font-size: 0.92rem;
+        padding: 0.4rem 0;
+    }
+
+    /* Utility buttons row */
+    .nav-utilities {
+        gap: 0.6rem;
+        padding-top: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .util-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.8rem;
+    }
+    .btn-nav-cta {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.9rem;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+        padding: 4rem 0 3rem;
+    }
+    .hero-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem;
+    }
+    .trust-indicators {
+        flex-direction: column;
+        gap: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    /* --- Section --- */
+    .section {
+        padding: 3rem 0;
+    }
+    .section-title {
+        font-size: 1.7rem;
+    }
+    .section-desc {
+        font-size: 0.95rem;
+    }
+    .section-header {
+        margin-bottom: 1.75rem;
+    }
+
+    /* --- Service Cards --- */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-card {
+        width: 100%;
+    }
+
+    /* --- Pricing Cards --- */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    /* --- Contact Wrapper --- */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .contact-form-container {
+        padding: 1.5rem 1rem;
+    }
+
+    /* --- Buttons general --- */
+    .btn {
+        font-size: 0.88rem;
+        padding: 0.7rem 1.1rem;
+    }
+
+    /* --- Inner Hero --- */
+    .inner-hero {
+        padding: 5rem 0 3rem;
+    }
+    .inner-hero h1 {
+        font-size: 2rem;
+    }
+    .inner-hero p {
+        font-size: 1rem;
+    }
+
+    /* --- Footer --- */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem 0 1rem;
+    }
+    .footer-brand-name {
+        font-size: 1.2rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.75rem 0;
+    }
+    .footer-legal {
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+    .footer-copy,
+    .footer-legal li a {
+        font-size: 0.8rem;
+    }
+
+    /* --- Certifications --- */
+    .certs-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    /* --- Split layout --- */
+    .split-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* --- CTA Split (index, compliance) --- */
+    .cta-split,
+    .cta-split-comp {
+        flex-direction: column;
+    }
+    .cta-split-img,
+    .cta-split-comp-img {
+        min-height: 200px;
+    }
+    .cta-split-content,
+    .cta-split-comp-content {
+        padding: 2.5rem 1rem;
+    }
+    .cta-split-content h2,
+    .cta-split-comp-content h2 {
+        font-size: 1.6rem;
+    }
+    .cta-benefits-list li {
+        font-size: 0.95rem;
+    }
 }

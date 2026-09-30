@@ -255,3 +255,242 @@
         padding: 4rem 2rem;
     }
 }
+
+/* === 1024px Fixes: index.css === */
+@media (max-width: 1024px) {
+
+    /* Layout 1: Hero */
+    .layout-1 {
+        min-height: calc(100vh - 72px);
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .hero-content p {
+        font-size: 1.15rem;
+    }
+
+    /* Layout 2: Floating circles */
+    .floating-circles-grid {
+        gap: 2rem;
+    }
+    .circle-badge {
+        width: 165px;
+        height: 165px;
+    }
+    .circle-badge h3 {
+        font-size: 2.8rem;
+    }
+
+    /* Layout 3: Horizontal slider */
+    .slider-card {
+        flex: 0 0 320px;
+    }
+
+    /* Layout 4: Big number grid */
+    .big-number-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3.5rem;
+    }
+    .num-block h4 {
+        font-size: 1.7rem;
+    }
+
+    /* Layout 5: Blockquote */
+    .massive-quote blockquote {
+        font-size: 2rem;
+    }
+
+    /* Layout 6: Diagonal bg */
+    .diagonal-bg h2 {
+        font-size: 2.5rem;
+    }
+    .btn-large-floating {
+        font-size: 1.15rem;
+        padding: 1.1rem 2.8rem;
+    }
+
+    /* Layout 6-new: CTA split */
+    .cta-split {
+        flex-direction: column;
+    }
+    .cta-split-img {
+        min-height: 320px;
+    }
+    .cta-split-content {
+        padding: 4rem 2.5rem;
+    }
+    .cta-split-content h2 {
+        font-size: 2rem;
+    }
+}
+
+/* === 768px Fixes: index.css === */
+@media (max-width: 768px) {
+
+    /* Layout 1: Centered hero */
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+    }
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Layout 2: Floating circles */
+    .floating-circles-grid {
+        gap: 1.5rem;
+    }
+    .circle-badge {
+        width: 155px;
+        height: 155px;
+    }
+    .circle-badge h3 {
+        font-size: 2.5rem;
+    }
+
+    /* Layout 3: Horizontal slider */
+    .slider-card {
+        flex: 0 0 82vw;
+        padding: 2rem 1.5rem;
+    }
+
+    /* Layout 4: Big number grid */
+    .big-number-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .num-block h4 {
+        font-size: 1.6rem;
+    }
+    .big-num {
+        font-size: 8rem;
+    }
+
+    /* Layout 5: Blockquote */
+    .massive-quote blockquote {
+        font-size: 1.6rem;
+    }
+
+    /* Layout 6: Diagonal bg */
+    .diagonal-bg {
+        padding: 8rem 0;
+    }
+    .diagonal-bg h2 {
+        font-size: 2rem;
+    }
+    .btn-large-floating {
+        font-size: 1.1rem;
+        padding: 1rem 2.5rem;
+    }
+
+    /* Layout 6-new: CTA split */
+    .cta-split-content {
+        padding: 3rem 1.5rem;
+    }
+    .cta-split-content h2 {
+        font-size: 1.8rem;
+    }
+    .cta-split-img {
+        min-height: 240px;
+    }
+    .cta-benefits-list li {
+        font-size: 1rem;
+    }
+}
+
+/* === 360px Fixes: index.css === */
+@media (max-width: 400px) {
+
+    /* Layout 1 hero buttons */
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    .hero-actions .btn {
+        width: 100%;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* Layout 2: floating circle grid */
+    .floating-circles-grid {
+        gap: 1.2rem;
+    }
+    .circle-badge {
+        width: 140px;
+        height: 140px;
+    }
+    .circle-badge h3 {
+        font-size: 2.2rem;
+    }
+    .circle-badge p {
+        font-size: 0.78rem;
+    }
+
+    /* Layout 3: horizontal slider */
+    .slider-card {
+        flex: 0 0 88vw;
+        padding: 2rem 1.2rem;
+    }
+    .slider-card h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Layout 4: big number grid */
+    .big-number-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .big-num {
+        font-size: 6rem;
+    }
+    .num-block h4 {
+        font-size: 1.4rem;
+    }
+
+    /* Layout 5: blockquote */
+    .massive-quote blockquote {
+        font-size: 1.4rem;
+    }
+    .quote-icon {
+        font-size: 3rem;
+    }
+
+    /* Layout 6: diagonal bg */
+    .diagonal-bg {
+        padding: 7rem 0;
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    }
+    .diagonal-bg h2 {
+        font-size: 1.8rem;
+    }
+    .btn-large-floating {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    /* Layout 6-new CTA split */
+    .cta-split-content {
+        padding: 2.5rem 1rem;
+    }
+    .cta-split-content h2 {
+        font-size: 1.6rem;
+    }
+    .cta-split-img {
+        min-height: 180px;
+    }
+}
