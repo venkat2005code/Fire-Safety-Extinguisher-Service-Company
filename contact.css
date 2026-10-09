@@ -116,7 +116,23 @@
     color: var(--secondary); 
     font-weight: bold;
 }
-.glass-form .btn-block { width: 100%; padding: 1.25rem; font-size: 1.25rem; border-radius: 50px; margin-top: 1rem;}
+/* Glass form submit button — always white text, high contrast */
+.glass-form .btn-block { 
+    width: 100%; 
+    padding: 1.25rem; 
+    font-size: 1.25rem; 
+    border-radius: 50px; 
+    margin-top: 1rem;
+    background-color: var(--secondary) !important;
+    color: #ffffff !important;
+    border: 2px solid transparent;
+}
+.glass-form .btn-block:hover {
+    background-color: var(--secondary-hover) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(225, 29, 72, 0.5);
+}
 
 /* Layout 28: Interactive Map Placeholder */
 .layout-28 { padding: 8rem 0; background: var(--bg-alt); }
@@ -176,9 +192,9 @@
 .acc-item[open] summary::after { transform: rotate(45deg); }
 .acc-item p { padding: 0 2rem 2rem; color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;}
 
-/* Layout 30: Team Roles Grid */
-.layout-30 { padding: 8rem 0; background: var(--primary); color: white; }
-[data-theme="dark"] .layout-30 { background: var(--bg-alt); }
+/* Layout 30: Team Roles Grid — always dark navy bg, white text */
+.layout-30 { padding: 8rem 0; background: #0F172A; color: white; }
+[data-theme="dark"] .layout-30 { background: #0B0F19; }
 .layout-30 h2 { font-size: 2.5rem; margin-bottom: 4rem; color: white !important;}
 .team-roles-grid { 
     display: grid; 

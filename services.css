@@ -13,8 +13,8 @@
 }
 .split-left-dark { 
     flex: 1;
-    background: var(--primary); 
-    color: var(--bg-color); 
+    background: #0F172A; /* Always deep navy, not theme-flipped */ 
+    color: #F8FAFC; 
     padding: 6rem 4rem; 
     display: flex; 
     flex-direction: column; 
@@ -23,7 +23,7 @@
 .split-left-dark h1 {
     font-size: clamp(3rem, 5vw, 4.5rem);
     margin-bottom: 1.5rem;
-    color: var(--bg-color) !important;
+    color: #ffffff !important;
 }
 .split-left-dark p {
     font-size: 1.25rem;
@@ -184,8 +184,14 @@
 .offset-box h2 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary); }
 [data-theme="dark"] .offset-box h2 { color: white; }
 .offset-box p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; }
-@media(max-width:768px){
-    .offset-box { margin: 0 auto; width: 90%; padding: 3rem 2rem; }
+/* Offset glass box button — ensure visible on light/dark frosted bg */
+.offset-box .btn-primary {
+    color: #ffffff !important;
+    background-color: var(--secondary);
+}
+.offset-box .btn-primary:hover {
+    background-color: var(--secondary-hover);
+    color: #ffffff !important;
 }
 
 /* === 1024px Fixes: services.css === */

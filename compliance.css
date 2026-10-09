@@ -170,11 +170,14 @@
     .shape-wrap-container h2 { padding-top: 0; text-align: center; }
 }
 
-/* Layout 18: Sleek, Minimal Newsletter/Email Signup Bar */
+/* Layout 18: Sleek, Minimal Newsletter/Email Signup Bar — always dark bg */
 .layout-18 {
     padding: 6rem 0;
-    background: var(--primary);
+    background: #0F172A;
     color: white;
+}
+[data-theme="dark"] .layout-18 {
+    background: #0B0F19;
 }
 .minimal-signup-bar {
     max-width: 900px;
@@ -215,14 +218,17 @@
     border-radius: 50px;
     border: none;
     background: var(--secondary);
-    color: white;
+    color: #ffffff;
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 .inline-signup button:hover {
-    background: #be123c;
+    background: var(--secondary-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(225, 29, 72, 0.5);
 }
 
 @media(max-width: 800px) {

@@ -151,7 +151,7 @@
 
 /* Residential Package Card */
 .residential-package-card {
-    background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
+    background: linear-gradient(135deg, #0F172A 0%, #1e293b 100%);
     border-radius: 24px;
     padding: 4rem;
     display: flex;
@@ -345,10 +345,11 @@
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 3rem;
 }
+/* btn-pulse: use design-system crimson, always white text */
 .btn-pulse {
     display: inline-block;
-    background: linear-gradient(135deg, #e11d48, #be123c);
-    color: white;
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-hover));
+    color: #ffffff !important;
     padding: 1.5rem 4rem;
     border-radius: 50px;
     font-size: 1.25rem;
@@ -376,7 +377,7 @@
 }
 .btn-pulse:hover {
     transform: scale(1.05);
-    color: white;
+    color: #ffffff !important;
     box-shadow: 0 15px 30px rgba(225, 29, 72, 0.5);
 }
 @media(max-width: 768px) {

@@ -5,31 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="favicon.jpg">
-    <title>FireGuard | Professional Fire Safety & Extinguisher Service</title>
-    <meta name="description" content="FireGuard — Professional fire safety compliance, extinguisher refilling, alarm installation, and safety audits. Book your inspection today.">
-    
-    <!-- Google Fonts: Inter & Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="index.css">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>FireGuard | Professional Fire Safety &amp; Extinguisher Service</title>
+    <meta name="description" content="FireGuard — Professional fire safety compliance, extinguisher refilling, alarm installation, and safety audits. Request a quote or book your inspection today.">
 
-    <!-- Premium Google Fonts -->
+    <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="home_cta.css">
 </head>
 
 <body>
-    
 
-    <!-- Main Navigation Header -->
+    <!-- =====================================================================
+         Emergency Top Bar
+    ====================================================================== -->
+    <div class="top-emergency-bar" id="top-emergency-bar">
+        <div class="container teb-inner">
+            <span class="teb-left">
+                <i class="fas fa-fire"></i>
+                <strong>24/7 Emergency Response</strong> — We're always on call for fire safety emergencies.
+            </span>
+            <div class="teb-right">
+                <a href="tel:+18003473723" class="teb-phone">
+                    <i class="fas fa-phone-alt"></i> 1-800-FIRE-SAFE
+                </a>
+                <button class="teb-close" id="teb-close" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         Main Navigation Header
+    ====================================================================== -->
     <header class="header" id="header">
         <div class="container header-container">
             <!-- Logo -->
@@ -37,7 +53,6 @@
                 <img src="fireguard_logo.jpg" alt="FireGuard Icon">
                 <div class="logo-text">
                     <span class="logo-brand">FireGuard</span>
-                    
                 </div>
             </a>
 
@@ -56,9 +71,10 @@
                             <li><a href="home2.html" class="dropdown-link">Residential Safety</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="services.html" class="nav-link">Extinguishers & Alarms</a></li>
-                    <li class="nav-item"><a href="compliance.html" class="nav-link">Compliance & Audits</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Extinguishers &amp; Alarms</a></li>
+                    <li class="nav-item"><a href="compliance.html" class="nav-link">Compliance &amp; Audits</a></li>
                     <li class="nav-item"><a href="pricing.html" class="nav-link">Inspection Plans</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
 
@@ -71,7 +87,9 @@
                         <i class="fas fa-moon dark-icon"></i>
                         <i class="fas fa-sun light-icon"></i>
                     </button>
-                    <a href="tel:+18003473723" class="btn btn-primary btn-nav-cta">Emergency</a>
+                    <a href="tel:+18003473723" class="btn btn-primary btn-nav-cta">
+                        <i class="fas fa-phone-alt"></i> Emergency
+                    </a>
                 </div>
             </nav>
         </div>
@@ -80,48 +98,133 @@
 
     <main>
 
-        <!-- Layout 1: Centered Text Over Full-Screen Darkened BG -->
+        <!-- =================================================================
+             HERO SECTION — Full-screen with 4 prominent CTA buttons
+        ================================================================== -->
         <section id="hero-l1" class="layout-1">
-            <div class="hero-bg" style="background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('./478c939d-055c-4385-835b-d808f7d31a5d.jpeg');"></div>
+            <div class="hero-bg" style="background-image: linear-gradient(rgba(10, 25, 47, 0.72), rgba(10, 25, 47, 0.88)), url('fireguard_professional_1791532756623.jpg');"></div>
             <div class="container hero-content">
-                <span class="badge">Your Safety is Our Priority</span>
-                <h1 class="hero-title">Professional Fire Safety & Total Compliance</h1>
+                <span class="badge"><i class="fas fa-shield-alt"></i> Your Safety is Our Priority</span>
+                <h1 class="hero-title">Professional Fire Safety &amp; Total Compliance</h1>
                 <p class="hero-subtitle">We protect your people, property, and business from fire risks. Fast, certified, and fully compliant with OSHA and NFPA standards.</p>
-                <div class="hero-actions">
-                    <a href="contact.html" class="btn btn-primary">Book an Inspection</a>
-                    <a href="#services-l3" class="btn btn-outline">Explore Services</a>
+
+                <!-- PRIMARY CTA ROW -->
+                <div class="hero-actions hero-cta-group" id="hero-cta-group">
+                    <a href="contact.html?action=quote" class="btn btn-cta btn-cta--quote" id="cta-hero-quote">
+                        <span class="cta-icon"><i class="fas fa-file-invoice-dollar"></i></span>
+                        <span class="cta-text">
+                            <strong>Request a Quote</strong>
+                            <small>Free, no-obligation estimate</small>
+                        </span>
+                    </a>
+                    <a href="contact.html?action=inspection" class="btn btn-cta btn-cta--inspection" id="cta-hero-inspection">
+                        <span class="cta-icon"><i class="fas fa-clipboard-check"></i></span>
+                        <span class="cta-text">
+                            <strong>Book an Inspection</strong>
+                            <small>Same-day slots available</small>
+                        </span>
+                    </a>
+                    <a href="contact.html?action=schedule" class="btn btn-cta btn-cta--schedule" id="cta-hero-schedule">
+                        <span class="cta-icon"><i class="fas fa-calendar-check"></i></span>
+                        <span class="cta-text">
+                            <strong>Schedule Service</strong>
+                            <small>Maintenance &amp; refills</small>
+                        </span>
+                    </a>
+                    <a href="contact.html" class="btn btn-cta btn-cta--contact" id="cta-hero-contact">
+                        <span class="cta-icon"><i class="fas fa-headset"></i></span>
+                        <span class="cta-text">
+                            <strong>Contact Us</strong>
+                            <small>Talk to an expert now</small>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Trust indicators -->
+                <div class="hero-trust">
+                    <span class="trust-chip"><i class="fas fa-certificate"></i> OSHA Certified</span>
+                    <span class="trust-chip"><i class="fas fa-fire-extinguisher"></i> NFPA Compliant</span>
+                    <span class="trust-chip"><i class="fas fa-star"></i> 4.9★ Rated</span>
+                    <span class="trust-chip"><i class="fas fa-clock"></i> 45-Min Response</span>
                 </div>
             </div>
         </section>
 
-        <!-- Layout 3: Horizontal "Timeline" Slider-Style Cards -->
+        <!-- =================================================================
+             QUICK-ACTION CTA BAR — Sticky banner just below hero
+        ================================================================== -->
+        <div class="quick-cta-bar" id="quick-cta-bar">
+            <div class="container qcb-inner">
+                <a href="contact.html?action=quote" class="qcb-btn qcb-btn--quote" id="qcb-quote">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <span>Request a Quote</span>
+                </a>
+                <a href="contact.html?action=inspection" class="qcb-btn qcb-btn--inspection" id="qcb-inspection">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span>Book an Inspection</span>
+                </a>
+                <a href="contact.html?action=schedule" class="qcb-btn qcb-btn--schedule" id="qcb-schedule">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Schedule Service</span>
+                </a>
+                <a href="contact.html" class="qcb-btn qcb-btn--contact" id="qcb-contact">
+                    <i class="fas fa-headset"></i>
+                    <span>Contact Us</span>
+                </a>
+                <a href="tel:+18003473723" class="qcb-btn qcb-btn--emergency" id="qcb-emergency">
+                    <i class="fas fa-phone-alt fa-shake"></i>
+                    <span>Emergency: 1-800-FIRE-SAFE</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- =================================================================
+             SERVICES SLIDER — Horizontal cards
+        ================================================================== -->
         <section id="services-l3" class="layout-3">
             <div class="container">
                 <div class="section-header text-center">
                     <h2 class="section-title">Comprehensive Protection</h2>
-                    <p class="section-desc">We provide end-to-end fire safety services to ensure your business is fully protected, compliant, and prepared for any emergency.</p>
+                    <p class="section-desc">End-to-end fire safety services to ensure your business is fully protected, compliant, and prepared for any emergency.</p>
                 </div>
                 <div class="horizontal-slider">
                     <div class="slider-card">
                         <i class="fas fa-fire-extinguisher"></i>
                         <h3>Extinguishers</h3>
+                        <p>Sales, refills, hydro-testing &amp; replacements — all extinguisher types covered.</p>
                         <a href="services.html" class="btn btn-outline mt-3" style="width: 100%;">View Details</a>
                     </div>
                     <div class="slider-card">
                         <i class="fas fa-bell"></i>
                         <h3>Alarm Systems</h3>
+                        <p>Installation, testing, and monitoring of commercial and residential fire alarms.</p>
                         <a href="services.html" class="btn btn-outline mt-3" style="width: 100%;">View Details</a>
                     </div>
                     <div class="slider-card">
                         <i class="fas fa-clipboard-check"></i>
                         <h3>Compliance Audits</h3>
+                        <p>Full OSHA/NFPA audits with written reports and guaranteed pass certification.</p>
                         <a href="compliance.html" class="btn btn-outline mt-3" style="width: 100%;">View Details</a>
+                    </div>
+                    <div class="slider-card">
+                        <i class="fas fa-water"></i>
+                        <h3>Sprinkler Systems</h3>
+                        <p>Design, installation, annual inspections, and repair of wet/dry sprinkler systems.</p>
+                        <a href="services.html" class="btn btn-outline mt-3" style="width: 100%;">View Details</a>
+                    </div>
+                    <div class="slider-card">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Kitchen Suppression</h3>
+                        <p>Hood suppression systems for commercial kitchens — Ansul &amp; equivalent.</p>
+                        <a href="services.html" class="btn btn-outline mt-3" style="width: 100%;">View Details</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Layout 2: Four Floating Circle Badges Overlapping Section Border -->
+        <!-- =================================================================
+             STATS / TRUST SECTION
+        ================================================================== -->
         <section id="trust-l2" class="layout-2">
             <div class="container">
                 <div class="section-header text-center">
@@ -131,13 +234,98 @@
                 <div class="floating-circles-grid">
                     <div class="circle-badge"><h3>15+</h3><p>Years</p></div>
                     <div class="circle-badge"><h3>24/7</h3><p>Support</p></div>
-                    <div class="circle-badge"><h3>10K</h3><p>Audits</p></div>
+                    <div class="circle-badge"><h3>10K+</h3><p>Audits</p></div>
                     <div class="circle-badge"><h3>100%</h3><p>Compliant</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- Layout 5: Single Massive Blockquote Layout -->
+        <!-- =================================================================
+             MID-PAGE 4-CTA GRID — Prominent service action cards
+        ================================================================== -->
+        <section id="cta-grid-section" class="cta-grid-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title cgs-title">Ready to Get Started?</h2>
+                    <p class="section-desc">Choose an action below — our team is standing by to help you stay safe and compliant.</p>
+                </div>
+                <div class="cta-cards-grid" id="cta-cards-grid">
+
+                    <!-- CTA 1: Request a Quote -->
+                    <div class="cta-action-card cta-action-card--quote" id="cac-quote">
+                        <div class="cac-icon-wrap">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3>Request a Quote</h3>
+                        <p>Get a free, detailed estimate for any fire safety service — extinguishers, alarms, suppression systems, or full compliance audits.</p>
+                        <ul class="cac-bullets">
+                            <li><i class="fas fa-check"></i> No-obligation estimate</li>
+                            <li><i class="fas fa-check"></i> Response within 2 hours</li>
+                            <li><i class="fas fa-check"></i> Transparent pricing</li>
+                        </ul>
+                        <a href="contact.html?action=quote" class="cac-btn cac-btn--primary" id="cac-btn-quote">
+                            Get My Free Quote <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- CTA 2: Book an Inspection -->
+                    <div class="cta-action-card cta-action-card--inspection" id="cac-inspection">
+                        <div class="cac-icon-wrap">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>Book an Inspection</h3>
+                        <p>Schedule a full fire safety inspection by our certified technicians. We'll check every system and deliver a pass/fail report on the spot.</p>
+                        <ul class="cac-bullets">
+                            <li><i class="fas fa-check"></i> Same-day slots available</li>
+                            <li><i class="fas fa-check"></i> OSHA &amp; NFPA certified</li>
+                            <li><i class="fas fa-check"></i> Written compliance report</li>
+                        </ul>
+                        <a href="contact.html?action=inspection" class="cac-btn cac-btn--primary" id="cac-btn-inspection">
+                            Book Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- CTA 3: Schedule Service -->
+                    <div class="cta-action-card cta-action-card--schedule" id="cac-schedule">
+                        <div class="cac-icon-wrap">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Schedule Service</h3>
+                        <p>Plan preventative maintenance, extinguisher refilling, alarm testing, or suppression system servicing at a time that works for you.</p>
+                        <ul class="cac-bullets">
+                            <li><i class="fas fa-check"></i> Flexible scheduling</li>
+                            <li><i class="fas fa-check"></i> Zero operational disruption</li>
+                            <li><i class="fas fa-check"></i> Annual service contracts</li>
+                        </ul>
+                        <a href="contact.html?action=schedule" class="cac-btn cac-btn--primary" id="cac-btn-schedule">
+                            Schedule Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- CTA 4: Contact Us -->
+                    <div class="cta-action-card cta-action-card--contact" id="cac-contact">
+                        <div class="cac-icon-wrap">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Contact Us</h3>
+                        <p>Have questions? Speak directly with one of our fire safety experts — we'll help you identify exactly what your property needs.</p>
+                        <ul class="cac-bullets">
+                            <li><i class="fas fa-check"></i> Live support Mon–Fri</li>
+                            <li><i class="fas fa-check"></i> Emergency line 24/7</li>
+                            <li><i class="fas fa-check"></i> Quick email response</li>
+                        </ul>
+                        <a href="contact.html" class="cac-btn cac-btn--primary" id="cac-btn-contact">
+                            Get in Touch <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div><!-- /.cta-cards-grid -->
+            </div>
+        </section>
+
+        <!-- =================================================================
+             TESTIMONIAL
+        ================================================================== -->
         <section id="test-l5" class="layout-5">
             <div class="container text-center">
                 <div class="massive-quote">
@@ -148,7 +336,9 @@
             </div>
         </section>
 
-        <!-- Layout 4: Large 01, 02, 03 Typography Layout -->
+        <!-- =================================================================
+             WHY CHOOSE FIREGUARD
+        ================================================================== -->
         <section id="diff-l4" class="layout-4 bg-light">
             <div class="container">
                 <div class="section-header text-center">
@@ -156,9 +346,9 @@
                     <p class="section-desc">We take the hassle out of fire safety. Our customer-first approach ensures you get exactly what you need without hidden fees.</p>
                 </div>
                 <div class="big-number-grid mb-5">
-                    <div class="num-block"><span class="big-num">01</span><h4>Certified Experts</h4><p>Fully licensed technicians.</p></div>
-                    <div class="num-block"><span class="big-num">02</span><h4>Rapid Response</h4><p>We arrive in 45 mins max.</p></div>
-                    <div class="num-block"><span class="big-num">03</span><h4>No Hidden Fees</h4><p>Transparent pricing.</p></div>
+                    <div class="num-block"><span class="big-num">01</span><h4>Certified Experts</h4><p>Fully licensed OSHA &amp; NFPA technicians.</p></div>
+                    <div class="num-block"><span class="big-num">02</span><h4>Rapid Response</h4><p>We arrive in 45 minutes max.</p></div>
+                    <div class="num-block"><span class="big-num">03</span><h4>No Hidden Fees</h4><p>Transparent, upfront pricing always.</p></div>
                 </div>
                 <div class="text-center mt-5" style="margin-top: 3rem;">
                     <a href="pricing.html" class="btn btn-primary btn-large">View Inspection Plans</a>
@@ -166,30 +356,63 @@
             </div>
         </section>
 
-        <!-- Layout 6 Redesign: 50/50 Split CTA -->
-        <section id="cta-l6" class="layout-6-new">
-            <div class="cta-split">
-                <div class="cta-split-img" style="background-image: url('./d435e6ac-8d71-4da6-b019-8b634d7858a2.jpeg');"></div>
-                <div class="cta-split-content">
+        <!-- =================================================================
+             FINAL CTA BAND — Full-width, four bold action buttons
+        ================================================================== -->
+        <section id="final-cta-band" class="final-cta-band">
+            <div class="fcb-overlay"></div>
+            <div class="container fcb-inner">
+                <div class="fcb-headline">
                     <h2>Don't Wait for an Emergency to Test Your Systems</h2>
-                    <ul class="cta-benefits-list">
-                        <li><i class="fas fa-check-circle"></i> <strong>24/7 Priority Dispatch</strong> - We're there when you need us most.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>100% Code Compliance</strong> - Guaranteed to pass OSHA/NFPA audits.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Zero Disruption</strong> - We inspect and maintain without halting your operations.</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary btn-large-floating">Request Your Comprehensive Risk Assessment</a>
+                    <p>Take action today — one click is all it takes to protect your business, your team, and your assets.</p>
+                </div>
+                <div class="fcb-actions">
+                    <a href="contact.html?action=quote" class="fcb-btn fcb-btn--quote" id="fcb-btn-quote">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <span>
+                            <strong>Request a Quote</strong>
+                            <small>Free estimate, 2-hr response</small>
+                        </span>
+                    </a>
+                    <a href="contact.html?action=inspection" class="fcb-btn fcb-btn--inspection" id="fcb-btn-inspection">
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>
+                            <strong>Book an Inspection</strong>
+                            <small>Same-day slots available</small>
+                        </span>
+                    </a>
+                    <a href="contact.html?action=schedule" class="fcb-btn fcb-btn--schedule" id="fcb-btn-schedule">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>
+                            <strong>Schedule Service</strong>
+                            <small>Maintenance &amp; refills</small>
+                        </span>
+                    </a>
+                    <a href="contact.html" class="fcb-btn fcb-btn--contact" id="fcb-btn-contact">
+                        <i class="fas fa-headset"></i>
+                        <span>
+                            <strong>Contact Us</strong>
+                            <small>Talk to an expert now</small>
+                        </span>
+                    </a>
+                </div>
+                <div class="fcb-emergency">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Fire Safety Emergency?</strong> Call us 24/7:
+                    <a href="tel:+18003473723" class="fcb-emergency-link">1-800-FIRE-SAFE</a>
                 </div>
             </div>
         </section>
 
-</main>
+    </main>
 
-<footer class="footer">
-        <!-- Top accent bar -->
+    <!-- =================================================================
+         FOOTER
+    ================================================================== -->
+    <footer class="footer">
         <div class="footer-accent-bar"></div>
 
         <div class="container">
-            <!-- Main Footer Grid -->
             <div class="footer-grid">
 
                 <!-- Col 1: Brand -->
@@ -215,9 +438,10 @@
                     <h4 class="footer-col-title">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> Fire Protection</a></li>
-                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Extinguishers & Alarms</a></li>
-                        <li><a href="compliance.html"><i class="fas fa-chevron-right"></i> Compliance & Audits</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Extinguishers &amp; Alarms</a></li>
+                        <li><a href="compliance.html"><i class="fas fa-chevron-right"></i> Compliance &amp; Audits</a></li>
                         <li><a href="pricing.html"><i class="fas fa-chevron-right"></i> Inspection Plans</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
                         <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Emergency Support</a></li>
                     </ul>
                 </div>
@@ -230,7 +454,8 @@
                         <li><a href="services.html"><i class="fas fa-chevron-right"></i> Fire Alarm Installation</a></li>
                         <li><a href="services.html"><i class="fas fa-chevron-right"></i> Safety Audits</a></li>
                         <li><a href="services.html"><i class="fas fa-chevron-right"></i> Compliance Inspection</a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Book an Inspection</a></li>
+                        <li><a href="contact.html?action=inspection"><i class="fas fa-chevron-right"></i> Book an Inspection</a></li>
+                        <li><a href="contact.html?action=quote"><i class="fas fa-chevron-right"></i> Request a Quote</a></li>
                     </ul>
                 </div>
 
@@ -255,11 +480,19 @@
                             <span>Mon–Fri: 8am – 6pm<br>Emergency: 24/7</span>
                         </li>
                     </ul>
+                    <!-- Footer CTAs -->
+                    <div class="footer-cta-row">
+                        <a href="contact.html?action=quote" class="footer-cta-link">
+                            <i class="fas fa-file-invoice-dollar"></i> Request a Quote
+                        </a>
+                        <a href="contact.html?action=inspection" class="footer-cta-link">
+                            <i class="fas fa-clipboard-check"></i> Book Inspection
+                        </a>
+                    </div>
                 </div>
 
             </div><!-- /.footer-grid -->
 
-            <!-- Divider -->
             <div class="footer-divider"></div>
 
             <!-- Footer Bottom Bar -->
@@ -275,6 +508,54 @@
         </div>
     </footer>
 
+    <!-- =====================================================================
+         MOBILE FLOATING CTA BAR (visible on small screens only)
+    ====================================================================== -->
+    <div class="mobile-float-cta" id="mobile-float-cta">
+        <a href="contact.html?action=quote" class="mfcta-btn mfcta-btn--quote">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <span>Quote</span>
+        </a>
+        <a href="contact.html?action=inspection" class="mfcta-btn mfcta-btn--inspection">
+            <i class="fas fa-clipboard-check"></i>
+            <span>Inspect</span>
+        </a>
+        <a href="contact.html?action=schedule" class="mfcta-btn mfcta-btn--schedule">
+            <i class="fas fa-calendar-check"></i>
+            <span>Schedule</span>
+        </a>
+        <a href="contact.html" class="mfcta-btn mfcta-btn--contact">
+            <i class="fas fa-headset"></i>
+            <span>Contact</span>
+        </a>
+        <a href="tel:+18003473723" class="mfcta-btn mfcta-btn--emergency">
+            <i class="fas fa-phone-alt"></i>
+            <span>Call</span>
+        </a>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        // Close emergency top bar
+        document.getElementById('teb-close').addEventListener('click', function () {
+            const bar = document.getElementById('top-emergency-bar');
+            bar.style.maxHeight = '0';
+            bar.style.padding = '0';
+            bar.style.overflow = 'hidden';
+            bar.style.opacity = '0';
+        });
+
+        // Scroll-triggered sticky quick-CTA bar
+        const quickBar = document.getElementById('quick-cta-bar');
+        const hero = document.getElementById('hero-l1');
+        window.addEventListener('scroll', function () {
+            const heroBottom = hero.getBoundingClientRect().bottom;
+            if (heroBottom < 0) {
+                quickBar.classList.add('qcb--sticky');
+            } else {
+                quickBar.classList.remove('qcb--sticky');
+            }
+        });
+    </script>
 </body>
 </html>

@@ -1,7 +1,8 @@
 :root {
-    --primary: #0F172A; /* Deep slate */
-    --secondary: #E11D48; /* Elegant Crimson */
-    --secondary-hover: #BE123C; /* Darker Crimson */
+    --primary: #0F172A;           /* Deep slate — heading & dark bg color */
+    --primary-dark: #0F172A;      /* Always-dark navy — safe for btn text on light bg */
+    --secondary: #E11D48;         /* Elegant Crimson */
+    --secondary-hover: #BE123C;   /* Darker Crimson */
     --text-color: #334155;
     --text-muted: #64748B;
     --bg-color: #F8FAFC;
@@ -13,13 +14,17 @@
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
     --shadow-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 30px 60px -15px rgba(0, 0, 0, 0.2);
     
     --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 [data-theme="dark"] {
-    --primary: #F8FAFC;
+    /* --primary flips to near-white for headings/text in dark mode */
+    --primary: #E2E8F0;
+    /* --primary-dark stays anchored to navy — always usable as a dark bg/text on light surface */
+    --primary-dark: #0F172A;
     --secondary: #FB7185;
     --secondary-hover: #F43F5E;
     --text-color: #CBD5E1;
@@ -27,12 +32,13 @@
     --bg-color: #0B0F19;
     --bg-alt: #111827;
     --card-bg: #1F2937;
-    --border-color: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.07);
     
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
     --shadow-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
 }
 /* ==========================================================================
    CSS Variables & Theming
@@ -103,22 +109,28 @@ img {
     font-family: var(--font-heading);
     font-weight: 600;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s ease;
     border: none;
     text-align: center;
+    text-decoration: none;
 }
 
+/* Primary button: crimson bg, always white text — high contrast in both modes */
 .btn-primary {
     background-color: var(--secondary);
-    color: #fff;
+    color: #ffffff !important;
+    border: 2px solid transparent;
 }
 
 .btn-primary:hover {
     background-color: var(--secondary-hover);
+    color: #ffffff !important;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 8px 20px rgba(225, 29, 72, 0.4);
+    border-color: transparent;
 }
 
+/* Outline button: crimson border/text, filled on hover */
 .btn-outline {
     background-color: transparent;
     border: 2px solid var(--secondary);
@@ -127,8 +139,25 @@ img {
 
 .btn-outline:hover {
     background-color: var(--secondary);
-    color: #fff;
+    color: #ffffff;
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(225, 29, 72, 0.3);
+}
+
+/* Dark-mode outline button: ensure crimson stays readable */
+[data-theme="dark"] .btn-outline {
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background-color: var(--secondary);
+    color: #ffffff;
+}
+
+/* Nav CTA button — always white text on crimson */
+.btn-nav-cta.btn-primary {
+    color: #ffffff !important;
 }
 
 .btn-block {
@@ -140,7 +169,7 @@ img {
    Header & Navigation
    ========================================================================== */
 .header {
-    background-color: var(--bg-main);
+    background-color: var(--bg-color);
     box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
@@ -153,7 +182,7 @@ img {
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .logo {
@@ -234,13 +263,13 @@ img {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: 0.8rem;
 }
 
 .nav-link {
@@ -250,6 +279,7 @@ img {
     font-size: 0.95rem;
     position: relative;
     white-space: nowrap;
+    padding: 0.5rem 0; /* Add top/bottom padding */
 }
 
 .nav-link:hover, .nav-link.active {
@@ -336,8 +366,9 @@ html[dir="rtl"] .dropdown-menu {
     display: flex;
     align-items: center;
     gap: 1rem;
-    border-inline-start: 1px solid var(--border-color);
-    padding-inline-start: 1rem;
+    border-left: 1px solid var(--border-color);
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
 }
 
 .util-btn {
