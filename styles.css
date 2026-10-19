@@ -251,32 +251,36 @@ img {
 }
 
 .btn-nav-cta {
-    padding: 0.5rem 1.2rem;
+    padding: 0.45rem 0.95rem;
     border-radius: 4px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.5rem;
 }
 
 .nav-link {
     font-family: var(--font-heading);
     font-weight: 500;
     color: var(--text-main);
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     position: relative;
     white-space: nowrap;
     padding: 0.5rem 0; /* Add top/bottom padding */
@@ -327,7 +331,19 @@ html[dir="rtl"] .dropdown-menu {
     right: 0;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown .fa-chevron-down {
+    font-size: 0.75rem;
+    margin-left: 0.35rem;
+    transition: transform 0.25s ease;
+}
+
+.dropdown:hover .fa-chevron-down,
+.dropdown.active .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown.active .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -365,18 +381,18 @@ html[dir="rtl"] .dropdown-menu {
 .nav-utilities {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.55rem;
     border-left: 1px solid var(--border-color);
-    padding-left: 1.5rem;
-    margin-left: 0.5rem;
+    padding-left: 0.85rem;
+    margin-left: 0.25rem;
 }
 
 .util-btn {
     background: transparent;
     border: 1px solid var(--border-color);
     color: var(--text-main);
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -385,7 +401,7 @@ html[dir="rtl"] .dropdown-menu {
     transition: var(--transition);
     font-family: var(--font-heading);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .util-btn:hover {

@@ -15,12 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 2. Dropdown Toggle for Mobile
+    // 2. Dropdown Toggle for Mobile / Tablet
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
         const link = dropdown.querySelector('.nav-link');
         link.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
+            const isMobileNav = window.innerWidth <= 1100 || (mobileMenuToggle && window.getComputedStyle(mobileMenuToggle).display !== 'none');
+            if (isMobileNav) {
                 e.preventDefault();
                 dropdown.classList.toggle('active');
             }
@@ -102,5 +103,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }
+    });
+
+    // 8. Flip Card Touch/Click Toggle
+    const flipCards = document.querySelectorAll('.flip-card');
+    flipCards.forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+        });
     });
 });
